@@ -1,0 +1,28 @@
+Certifique-se de ter instalado:
+    - NODE.JS 
+    - PIP ou Anaconda
+
+
+Para download das reviews do site Reclame Aqui
+
+1. Abra essa pasta no terminal e comande:
+    npm install
+
+2. Uma vez instaladas as dependências comande:
+    node app_reclame_aqui.js {quantidade} {empresa}
+Obs.:
+quantidade => Quantidade de requisições paralelas
+empresa => Nome da empresa que se deseja fazer o download da reclamações
+
+
+Para download das reviews do site Apptweak
+
+1. Abra essa pasta no terminal e comande:
+    pip install -r requirement.txt
+
+2. Uma vez instaladas as dependências comande:
+    python apptweak-selenium.py
+Obs.: É preciso ter a versao 80 do Chrome instalada
+
+
+

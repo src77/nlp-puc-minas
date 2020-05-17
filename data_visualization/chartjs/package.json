@@ -1,0 +1,29 @@
+{
+  "name": "chartjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "grunt dist && nodemon server.js"
+  },
+  "author": "Samuel Rodrigues",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "highcharts": "^8.0.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-connect-route": "^0.3.4",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-connect": "^2.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-env": "^1.0.1",
+    "grunt-serve": "^0.1.6",
+    "nodemon": "^1.19.4"
+  }
+}

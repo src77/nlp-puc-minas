@@ -1,0 +1,17 @@
+{
+  "name": "app_reclame_aqui",
+  "version": "1.0.0",
+  "description": "Script para download de reviews",
+  "main": "app_reclame_aqui",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel Rodrigues",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "process": "^0.11.10",
+    "request": "^2.88.2",
+    "shelljs": "^0.8.3"
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <script src="//localhost:35729/livereload.js"></script> -->
+    <script src="/node_modules/lodash/lodash.js"></script>
+    <script src="/node_modules/moment/moment.js"></script>
+    <script src="locale.js"></script>
+    <!-- <script src="../node_modules/n-gram/index.js"></script> -->
+    <script src="/node_modules/highcharts/highcharts.js"></script>
+    <script src="/node_modules/highcharts/modules/boost.js"></script>
+    <script src="/node_modules/highcharts/modules/exporting.js"></script>
+    <link rel="stylesheet" href="chartjs.css">
+    <!-- <script src="/node_modules/normalize-text/dist/index.js"></script> -->
+    <title>Plataforma de Text Mining</title>
+</head>
+
+<body class="main-view">
+    <div id="id_loader" class="loader show">
+    </div>
+    <div id="id_loader_block" class="loader_block">
+    </div>
+
+    <div id="main_container" class="main_container">
+        <div class="main-chart-control">
+            <div class="search-bar">
+                <div>
+                    <img id="id_home" src="home.svg" />
+                    <input id="id_search_input" class="" type="text" placeholder="Pesquisar" name="search" value="">
+                    <button id="id_search_btn" class="search-btn" type="button">
+                        <svg focusable="false">
+                            <path
+                                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <br>
+            <div id="id_time_bar" class="time-bar">
+                <div id="id_semana" class="tablinks active" aria-selected="true" role="tab" tabindex="0"><span>Uma
+                        semana</span></div>
+                <div id="id_mes" class="tablinks" role="tab" tabindex="0"><span>Um mês</span></div>
+                <div id="id_tres_meses" class="tablinks" role="tab" tabindex="0"><span>Três meses</span></div>
+                <div id="id_seis_meses" class="tablinks" role="tab" tabindex="0"><span>Seis meses</span></div>
+                <div id="id_doze_meses" class="tablinks" role="tab" tabindex="0"><span>Doze meses</span></div>
+                <div id="id_tudo" class="tablinks" role="tab" tabindex="0">
+                    <span>Tudo</span></div>
+            </div>
+
+            <div class="division-line"></div>
+
+            <div class="charts-wrapper">
+                <div>
+                    <select id="comment_type">
+                        <option value="negativo">Comentários negativos</option>
+                        <option value="positivo">Comentários positivos</option>
+                    </select>
+                    <!-- <select id="n_gram_top">
+                        <option value="15">Top 15</option>
+                        <option value="10">Top 10</option>
+                        <option value="5">Top 5</option>
+                    </select> -->
+                    <div id="canvas_bar" style="height: 400px; width: 100%;" class="charts-container"></div>
+                </div>
+                <div>
+                    <div style="display: inline;">
+                        <p style="margin-left: 25px; display: inline; font: 600 11px system-ui;">Agrupar por: </p>
+                        <select id="id_time_select">
+                            <option value="day">Dia</option>
+                            <option value="week">Semana</option>
+                            <option value="month">Mês</option>
+                            <option value="year">Ano</option>
+                        </select>
+                        <input id="id_disable_labels" type="checkbox" style="margin-left: 20px; cursor: pointer;">
+                        <label style="display: inline; font: 600 11px system-ui; cursor: pointer;"
+                            for="id_disable_labels">Esconder
+                            rótulos</label>
+                    </div>
+                    <div id="canvas_line" style="height: 400px; width: 100%;" class="charts-container"></div>
+                </div>
+            </div>
+            <br>
+            <div class="tags-container">
+            </div>
+            <table class="table-comments">
+                <thead>
+                    <tr>
+                        <th style="min-width: 50px;">Data</th>
+                        <th style="width: 100%;">Comentários</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <span id="id_show_more" class="show_more">Mostrar mais</span>
+            <div style="padding: 20px">
+            </div>
+            <script src="chartjs.js"></script>
+            <!-- <script src="select_zoom.js"></script> -->
+        </div>
+
+</body>
+
+</html>

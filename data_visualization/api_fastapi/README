@@ -1,0 +1,13 @@
+Para executar o projeto:
+
+1. Inslale as dependências com o comando
+    pip install -r requirement.txt
+
+2. Navegue até a pasta src/
+    cd src/
+
+3. Execute o comando
+    uvicorn server:app --reload
+
+4. Para visualizar a api funcionando digite no navegador o endereço:
+    http://127.0.0.1:8000/docs
