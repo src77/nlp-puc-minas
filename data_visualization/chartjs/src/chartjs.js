@@ -1049,12 +1049,13 @@ async function searchStart(evt) {
     loading();
 
     setTimeout(() => {
+        clearTags();
         let n_gram = search.value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
         let data = dataSerie.mainData;
+        dataSerie.data = {};
         let filtered = { negative: '', positive: '' }
         filtered.negative = searchData(data.negative, n_gram, 'texto');
         filtered.positive = searchData(data.positive, n_gram, 'texto');
-        clearTags();
         showChart(filtered, 7, 15, true);
         dataSerie.search = search.value;
         showPage();
@@ -1111,6 +1112,8 @@ home.addEventListener('click', async function (evt) {
     if (dataSerie.data.tudo.data === dataSerie.mainData) return;
     loading();
     setTimeout(() => {
+        clearTags();
+        dataSerie.data = {}
         showChart(dataSerie.mainData, 7, 15, true);
         showPage();
     }, 5);
