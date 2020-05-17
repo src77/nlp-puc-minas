@@ -60,8 +60,6 @@ bancos = [
     {'name': "pag-bank", 'store': "android", '_id': "br.com.uol.ps.myaccount"},
     {'name': "sicoob", 'store': "ios", '_id': 416696406},
     {'name': "sicoob", 'store': "android", '_id': "br.com.sicoobnet"},
-    {'name': "facebook", 'store': "ios", '_id': 284882215},
-    {'name': "facebook", 'store': "android", '_id': "com.facebook.katana"},
     {'name': "santander-way", 'store': "ios", '_id': 1154266372 },
     {'name': "santander-way", 'store': "android", '_id': 'br.com.santander.way' },
     {'name': "bradesco-cartoes", 'store': "ios", '_id': 1073889634},
